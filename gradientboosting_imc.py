@@ -126,3 +126,17 @@ plt.barh(feat_imp['feature'].head(10), feat_imp['importance'].head(10))
 plt.gca().invert_yaxis()
 plt.title("10 Features mais importantes – Gradient Boosting")
 plt.show()
+
+#app
+
+import streamlit as st
+from sklearn.metrics import accuracy_score
+
+st.title("Avaliação do Modelo - Obesidade")
+
+# treino e predição
+y_pred = nb.predict(X_test)
+acc = accuracy_score(y_test, y_pred)
+
+st.subheader("Resultado do Modelo")
+st.metric("Acurácia", f"{acc:.2%}")
