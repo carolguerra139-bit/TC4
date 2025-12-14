@@ -50,8 +50,8 @@ cat_features = [col for col in X.columns if col not in num_features]
 
 # pré-processamento
 preprocess = ColumnTransformer([
-    ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols),
-    ('num', 'passthrough', num_cols)
+    ('cat', OneHotEncoder(handle_unknown='ignore'), cat_features),
+    ('num', 'passthrough', num_features)
 ])
 
 # split fixo
