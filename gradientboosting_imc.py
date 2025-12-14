@@ -50,7 +50,7 @@ cat_features = [col for col in X.columns if col not in num_features]
 
 # pré-processamento
 preprocess = ColumnTransformer([
-    ('cat', OneHotEncoder(handle_unknown='ignore'), cat_features),
+    ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), cat_features),
     ('num', 'passthrough', num_features)
 ])
 
