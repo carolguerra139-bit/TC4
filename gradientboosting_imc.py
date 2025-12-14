@@ -20,7 +20,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.naive_bayes import GaussianNB
 
 # 2. carregar o dataset
-df = pd.read_csv('/content/Obesity.csv')
+df = pd.read_csv('Obesity.csv')
 
 
 # 2.1 Criar coluna BMI (IMC)
